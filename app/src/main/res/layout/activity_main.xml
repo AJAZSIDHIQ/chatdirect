@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number (With Country Code)"
+        android:textSize="15dp"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/ph"
+        android:layout_centerHorizontal="true" />
+<LinearLayout
+    android:id="@+id/ph"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/openWhatsapp"
+    android:layout_marginBottom="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="+"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/phoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:hint="Phone Number with country code"
+        android:inputType="number"
+
+        android:textColorLink="@color/colorPrimary" />
+</LinearLayout>
+    <Button
+        android:id="@+id/openWhatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Chat"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Using this app you can chat in WhatsApp without\n     Saving Phone number to your contact list"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8864232517885605/8128705108">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
